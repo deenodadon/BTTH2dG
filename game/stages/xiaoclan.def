@@ -1,0 +1,176 @@
+; Xiao Clan Courtyard - Battle Through the Heavens 2.5D (fan-made)
+[Info]
+name = "Xiao Clan Courtyard"
+displayname = "Xiao Clan Courtyard"
+author = "BTTH 2.5D fan project"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -420
+boundright = 420
+boundhigh = -60
+boundlow = 0
+verticalfollow = .2
+floortension = 40
+tension = 80
+
+[PlayerInfo]
+p1startx = -140
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 140
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+[Scaling]
+topz = 0
+botz = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 420
+autoturn = 1
+resetBG = 1
+localcoord = 640, 480
+xscale = 1
+yscale = 1
+
+[Shadow]
+intensity = 110
+color = 30, 30, 50
+yscale = .25
+fade.range = 0, 0
+
+[Reflection]
+intensity = 0
+
+[Music]
+; drop an mp3/ogg in sound/ and point bgmusic at it
+bgmusic = 
+bgvolume = 0
+
+[BGdef]
+spr = xiaoclan.sff
+debugbg = 0
+
+[Begin Action 10]
+10,0, 0,0, 6
+10,1, 0,0, 6
+10,2, 0,0, 6
+10,3, 0,0, 6
+
+[Begin Action 11]
+11,0, 0,0, 5
+11,1, 0,0, 5
+11,2, 0,0, 5
+11,3, 0,0, 5
+
+[BG sky]
+type = normal
+spriteno = 0, 0
+layerno = 0
+start = 0, -60
+delta = 0.05, 0.05
+tile = 1, 0
+mask = 1
+
+[BG far mountains]
+type = normal
+spriteno = 1, 0
+layerno = 0
+start = 0, 70
+delta = 0.12, 0.1
+tile = 1, 0
+mask = 1
+
+[BG hills]
+type = normal
+spriteno = 2, 0
+layerno = 0
+start = 0, 110
+delta = 0.22, 0.15
+tile = 1, 0
+mask = 1
+
+[BG city]
+type = normal
+spriteno = 3, 0
+layerno = 0
+start = 0, 170
+delta = 0.4, 0.3
+tile = 1, 0
+mask = 1
+
+[BG courtyard]
+type = normal
+spriteno = 4, 0
+layerno = 0
+start = 0, 160
+delta = 0.7, 0.6
+mask = 1
+
+[BG floor]
+type = parallax
+spriteno = 5, 0
+layerno = 0
+start = 0, 410
+delta = 0.78, 1
+tile = 1, 0
+xscale = 1, 1.28
+yscalestart = 100
+yscaledelta = 1.2
+mask = 1
+
+[BG lantern L]
+type = anim
+actionno = 10
+layerno = 0
+start = -330, 300
+delta = 0.7, 0.6
+mask = 1
+
+[BG lantern R]
+type = anim
+actionno = 10
+layerno = 0
+start = 330, 300
+delta = 0.7, 0.6
+mask = 1
+
+[BG petals]
+type = anim
+actionno = 11
+layerno = 1
+start = 0, 0
+delta = 1.1, 1
+tile = 1, 1
+velocity = -0.4, 0.8
+mask = 1
+
+[BG post L]
+type = normal
+spriteno = 7, 0
+layerno = 1
+start = -520, 180
+delta = 1.35, 1
+mask = 1
+
+[BG post R]
+type = normal
+spriteno = 7, 0
+layerno = 1
+start = 560, 180
+delta = 1.35, 1
+mask = 1

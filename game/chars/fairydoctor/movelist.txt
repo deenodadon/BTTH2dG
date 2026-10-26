@@ -1,0 +1,11 @@
+Little Fairy Doctor - move list
+========================================
+
+Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
+Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+
+Poison Mist                              QCF + P                  Slow, lingering four-hit toxic cloud
+Toxic Palm                               QCB + P                  Stepping poisonous palm
+Poison Field                             D, D + P                 Area denial: poison pools on the ground for 3 seconds
+Woeful Poison Body                       QCF, QCF + P (1 bar)     Invincible toxic mist explosion
+Poison Calamity                          QCB, QCB + P (2 bars)    Miasma rain over the foe

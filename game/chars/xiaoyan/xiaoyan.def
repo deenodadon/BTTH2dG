@@ -1,0 +1,19 @@
+; Xiao Yan - Battle Through the Heavens 2.5D (fan-made, non-commercial)
+[Info]
+name = "Xiao Yan"
+displayname = "Xiao Yan"
+versiondate = 10,26,2026
+mugenversion = 1.1
+author = "BTTH 2.5D fan project"
+pal.defaults = 1,2,3,4,5,6
+localcoord = 640, 480
+
+[Files]
+cmd = xiaoyan.cmd
+cns = xiaoyan.cns
+stcommon = common1.cns
+sprite = xiaoyan.sff
+anim = xiaoyan.air
+sound = xiaoyan.snd
+
+[Arcade]

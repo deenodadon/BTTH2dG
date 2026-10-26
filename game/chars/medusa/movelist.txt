@@ -1,0 +1,11 @@
+Medusa - move list
+========================================
+
+Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
+Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+
+Venomous Flame                           QCF + P                  Three-hit poisonous flame
+Serpent Lunge                            QCB + P                  Fast lunging strike
+Spatial Seal                             D, D + P                 Seals space and freezes the foe in place
+Seven-Coloured Sky Swallowing Python     QCF, QCF + P (1 bar)     Rainbow python charges across the screen
+Spatial Collapse                         QCB, QCB + P (2 bars)    Crushing vortex around the foe

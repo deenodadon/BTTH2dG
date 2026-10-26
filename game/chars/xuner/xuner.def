@@ -1,0 +1,19 @@
+; Xun'er - Battle Through the Heavens 2.5D (fan-made, non-commercial)
+[Info]
+name = "Xun'er"
+displayname = "Xun'er"
+versiondate = 10,26,2026
+mugenversion = 1.1
+author = "BTTH 2.5D fan project"
+pal.defaults = 1,2,3,4,5,6
+localcoord = 640, 480
+
+[Files]
+cmd = xuner.cmd
+cns = xuner.cns
+stcommon = common1.cns
+sprite = xuner.sff
+anim = xuner.air
+sound = xuner.snd
+
+[Arcade]

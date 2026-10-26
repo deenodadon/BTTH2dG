@@ -1,0 +1,148 @@
+; Heavenly Flame Cavern - Battle Through the Heavens 2.5D (fan-made)
+[Info]
+name = "Heavenly Flame Cavern"
+displayname = "Heavenly Flame Cavern"
+author = "BTTH 2.5D fan project"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -420
+boundright = 420
+boundhigh = -60
+boundlow = 0
+verticalfollow = .2
+floortension = 40
+tension = 80
+
+[PlayerInfo]
+p1startx = -140
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 140
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound = -1000
+rightbound = 1000
+topbound = 0
+botbound = 0
+
+[Scaling]
+topz = 0
+botz = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 420
+autoturn = 1
+resetBG = 1
+localcoord = 640, 480
+xscale = 1
+yscale = 1
+
+[Shadow]
+intensity = 110
+color = 20, 0, 0
+yscale = .25
+fade.range = 0, 0
+
+[Reflection]
+intensity = 0
+
+[Music]
+; drop an mp3/ogg in sound/ and point bgmusic at it
+bgmusic = 
+bgvolume = 0
+
+[BGdef]
+spr = flamecave.sff
+debugbg = 0
+
+[Begin Action 10]
+10,0, 0,0, 6
+10,1, 0,0, 6
+10,2, 0,0, 6
+10,3, 0,0, 6
+10,4, 0,0, 6
+10,5, 0,0, 6
+
+[Begin Action 11]
+11,0, 0,0, 5
+11,1, 0,0, 5
+11,2, 0,0, 5
+11,3, 0,0, 5
+
+[BG glow]
+type = normal
+spriteno = 0, 0
+layerno = 0
+start = 0, -60
+delta = 0.05, 0.05
+tile = 1, 0
+mask = 1
+
+[BG far rock]
+type = normal
+spriteno = 1, 0
+layerno = 0
+start = 0, 110
+delta = 0.25, 0.2
+tile = 1, 0
+mask = 1
+
+[BG flame orb 1]
+type = anim
+actionno = 10
+layerno = 0
+start = -260, 200
+delta = 0.4, 0.3
+trans = add
+mask = 1
+
+[BG flame orb 2]
+type = anim
+actionno = 10
+layerno = 0
+start = 300, 170
+delta = 0.4, 0.3
+trans = add
+mask = 1
+
+[BG ceiling]
+type = normal
+spriteno = 2, 0
+layerno = 0
+start = 0, -60
+delta = 0.6, 0.5
+tile = 1, 0
+mask = 1
+
+[BG floor]
+type = parallax
+spriteno = 5, 0
+layerno = 0
+start = 0, 410
+delta = 0.78, 1
+tile = 1, 0
+xscale = 1, 1.28
+yscalestart = 100
+yscaledelta = 1.2
+mask = 1
+
+[BG embers]
+type = anim
+actionno = 11
+layerno = 1
+start = 0, 0
+delta = 1.1, 1
+tile = 1, 1
+velocity = 0.3, -1.2
+trans = add
+mask = 1

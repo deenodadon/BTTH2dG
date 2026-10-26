@@ -1,0 +1,18 @@
+; Battle Through the Heavens 2.5D - character & stage select
+[Characters]
+xiaoyan/xiaoyan.def, stages/xiaoclan.def
+yaolao/yaolao.def, stages/flamecave.def
+xuner/xuner.def, stages/xiaoclan.def
+medusa/medusa.def, stages/tagoredesert.def
+yunyun/yunyun.def, stages/yunlanpeak.def
+fairydoctor/fairydoctor.def, stages/yunlanpeak.def
+
+[ExtraStages]
+stages/xiaoclan.def
+stages/tagoredesert.def
+stages/yunlanpeak.def
+stages/flamecave.def
+
+[Options]
+arcade.maxmatches = 6,0,0,0,0,0,0,0,0,0
+team.maxmatches = 4,0,0,0,0,0,0,0,0,0

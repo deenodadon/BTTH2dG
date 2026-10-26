@@ -1,0 +1,11 @@
+Yun Yun - move list
+========================================
+
+Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
+Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+
+Wind Blade                               QCF + P                  Sword slash that throws a wind crescent
+Rising Gale                              F, D, DF + P             Spinning anti-air slash
+Wind Step                                QCB + K                  Wind Lightning Pavilion teleport
+Sword Storm                              QCF, QCF + P (1 bar)     Six slashes ending in a tornado
+Thousand Wind Swords                     QCB, QCB + P (2 bars)    Wind swords rain down on the foe

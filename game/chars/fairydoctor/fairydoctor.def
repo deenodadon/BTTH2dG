@@ -1,0 +1,19 @@
+; Little Fairy Doctor - Battle Through the Heavens 2.5D (fan-made, non-commercial)
+[Info]
+name = "Little Fairy Doctor"
+displayname = "Little Fairy Doctor"
+versiondate = 10,26,2026
+mugenversion = 1.1
+author = "BTTH 2.5D fan project"
+pal.defaults = 1,2,3,4,5,6
+localcoord = 640, 480
+
+[Files]
+cmd = fairydoctor.cmd
+cns = fairydoctor.cns
+stcommon = common1.cns
+sprite = fairydoctor.sff
+anim = fairydoctor.air
+sound = fairydoctor.snd
+
+[Arcade]

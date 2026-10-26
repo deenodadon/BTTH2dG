@@ -1,0 +1,12 @@
+Yao Lao - move list
+========================================
+
+Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
+Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+
+Bone Chilling Flame                      QCF + P                  Freezing white flame projectile
+Soul Shock                               QCB + P                  Unblockable soul-wave that bypasses guard
+Advanced Alchemy: Healing Pill           D, D + P (half bar)      Refines and eats a pill to restore life
+Spirit Drift                             QCB + K                  Ghostly teleport (behind the foe when close)
+Bone Chilling Flame Torrent              QCF, QCF + P (1 bar)     Multi-hit frost beam
+Soul Realm Domination                    QCB, QCB + P (2 bars)    Unblockable giant soul palm crashes on the foe

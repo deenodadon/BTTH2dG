@@ -1,0 +1,19 @@
+; Yun Yun - Battle Through the Heavens 2.5D (fan-made, non-commercial)
+[Info]
+name = "Yun Yun"
+displayname = "Yun Yun"
+versiondate = 10,26,2026
+mugenversion = 1.1
+author = "BTTH 2.5D fan project"
+pal.defaults = 1,2,3,4,5,6
+localcoord = 640, 480
+
+[Files]
+cmd = yunyun.cmd
+cns = yunyun.cns
+stcommon = common1.cns
+sprite = yunyun.sff
+anim = yunyun.air
+sound = yunyun.snd
+
+[Arcade]

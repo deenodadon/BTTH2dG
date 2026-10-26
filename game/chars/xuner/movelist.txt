@@ -1,0 +1,12 @@
+Xun'er - move list
+========================================
+
+Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
+Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+
+Emperor Seal: Open Mountain              QCF + P                  Golden seal projectile
+Golden Flame Rise                        F, D, DF + P             Invincible rising golden flame
+Emperor Seal: Ocean Reversal             QCB + K                  Somersault overhead kick
+Emperor Seal Skill                       QCF, QCF + P (1 bar)     Five-seal combo ending with Ancient Emperor
+Golden Emperor Burning Heaven Flame      QCB, QCB + P (2 bars)    Pillar of golden flame under the foe
+Bloodline Suppression                    passive                  Higher defence
