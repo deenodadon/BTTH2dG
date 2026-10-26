@@ -794,7 +794,7 @@ def buff_minus2(c):
 
 CMD_HEAD = """; Commands -------------------------------------------------------------------
 ; Buttons: x = light punch  y = heavy punch  a = light kick  b = heavy kick
-;          z = heavy punch (alt)  c = heavy kick (alt)  s = taunt
+;          z = special button     c = super button        s = taunt
 [Remap]
 x = x
 y = y
@@ -825,6 +825,13 @@ def commands():
         cmd("DD_" + b, "~D, D, " + b, 15)
     cmd("FF", "F, F", 10)
     cmd("BB", "B, B", 10)
+    # simple one/two-button shortcuts (z = special button, c = super button)
+    cmd("easy_dc", "/$D, c", 1)
+    cmd("easy_c", "c", 1)
+    cmd("easy_dz", "/$D, z", 1)
+    cmd("easy_bz", "/$B, z", 1)
+    cmd("easy_fz", "/$F, z", 1)
+    cmd("easy_z", "z", 1)
     cmd("recovery", "x+y", 1)
     cmd("throw", "/F, y", 1)
     cmd("throw", "/B, y", 1)
@@ -880,11 +887,34 @@ ANTIAIR = {"xiaoyan": 1200, "xuner": 1100, "yunyun": 1100}
 RUSH = {"xiaoyan": 1000, "medusa": 1100, "fairydoctor": 1100, "yaolao": 1100, "xuner": 1200, "yunyun": 3000}
 
 
+EASY = {"QCFQCF": "easy_c", "QCBQCB": "easy_dc", "QCF_x": "easy_z", "QCB_x": "easy_fz", "DP_x": "easy_dz",
+        "DD_x": "easy_dz", "QCB_a": "easy_bz"}
+
+
+def easy_cmd(cmd):
+    return EASY.get(cmd.rsplit("_", 1)[0], EASY.get(cmd))
+
+
 def minus1(key):
     st = St(-1, "Command -> state")
     cancel = "(StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))"
     st.add("VarSet", "1", {"var(1)": "command = \"QCF_y\" || command = \"QCB_y\" || command = \"DP_y\""},
            label="strong version flag")
+    order = ["easy_dc", "easy_c", "easy_dz", "easy_bz", "easy_fz", "easy_z"]
+    specs = sorted(SPECIALS[key], key=lambda sp: order.index(easy_cmd(sp[1][0])))
+    for no, cmds, cost, label in specs:
+        ez = easy_cmd(cmds[0])
+        trig = [("command = \"%s\"" % ez,)]
+        al = [cancel]
+        if ez in ("easy_z", "easy_c"):
+            al.append("command != \"holddown\"")
+        if cost:
+            al.append("Power >= %d" % cost)
+        if key == "yunyun" and no == 1200 or key == "yaolao" and no == 1300:
+            st.add("VarSet", trig, {"var(2)": "P2BodyDist X < 140"}, all=al, label="teleport side")
+        if key == "fairydoctor" and no == 1200:
+            al.append("NumHelper(7600) = 0")
+        st.add("ChangeState", trig, {"value": no}, all=al, label=label + " (easy)")
     for no, cmds, cost, label in SPECIALS[key]:
         trig = [("command = \"%s\"" % cmd,) for cmd in cmds]
         al = [cancel]
@@ -910,12 +940,12 @@ def minus1(key):
             al = ["command = \"holddown\"", "StateType != A"]
         return trig, al
     for no, btn, stype, chain in (
-            (210, "y", "S", (200, 209)), (210, "z", "S", (200, 209)), (200, "x", "S", None),
-            (240, "b", "S", (200, 239)), (240, "c", "S", (200, 239)), (230, "a", "S", None),
-            (410, "y", "C", (400, 409)), (410, "z", "C", (400, 409)), (400, "x", "C", None),
-            (440, "b", "C", (400, 439)), (440, "c", "C", (400, 439)), (430, "a", "C", None),
-            (610, "y", "A", None), (610, "z", "A", None), (600, "x", "A", None),
-            (640, "b", "A", None), (640, "c", "A", None), (630, "a", "A", None)):
+            (210, "y", "S", (200, 209)), (200, "x", "S", None),
+            (240, "b", "S", (200, 239)), (230, "a", "S", None),
+            (410, "y", "C", (400, 409)), (400, "x", "C", None),
+            (440, "b", "C", (400, 439)), (430, "a", "C", None),
+            (610, "y", "A", None), (600, "x", "A", None),
+            (640, "b", "A", None), (630, "a", "A", None)):
         trig, al = norm(no, btn, stype, chain)
         st.add("ChangeState", trig, {"value": no}, all=al)
     st.add("ChangeState", [("command = \"s\"", "StateType = S", "Ctrl")], {"value": 195}, label="Taunt")

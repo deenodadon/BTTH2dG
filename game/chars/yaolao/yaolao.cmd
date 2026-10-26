@@ -1,6 +1,6 @@
 ; Commands -------------------------------------------------------------------
 ; Buttons: x = light punch  y = heavy punch  a = light kick  b = heavy kick
-;          z = heavy punch (alt)  c = heavy kick (alt)  s = taunt
+;          z = special button     c = super button        s = taunt
 [Remap]
 x = x
 y = y
@@ -133,6 +133,36 @@ time = 10
 name = "BB"
 command = B, B
 time = 10
+
+[Command]
+name = "easy_dc"
+command = /$D, c
+time = 1
+
+[Command]
+name = "easy_c"
+command = c
+time = 1
+
+[Command]
+name = "easy_dz"
+command = /$D, z
+time = 1
+
+[Command]
+name = "easy_bz"
+command = /$B, z
+time = 1
+
+[Command]
+name = "easy_fz"
+command = /$F, z
+time = 1
+
+[Command]
+name = "easy_z"
+command = z
+time = 1
 
 [Command]
 name = "recovery"
@@ -385,6 +415,53 @@ type = VarSet
 trigger1 = 1
 var(1) = command = "QCF_y" || command = "QCB_y" || command = "DP_y"
 
+[State -1, Soul Realm domination (easy)]
+type = ChangeState
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+triggerall = Power >= 2000
+trigger1 = command = "easy_dc"
+value = 3100
+
+[State -1, Bone Chilling Flame torrent (easy)]
+type = ChangeState
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+triggerall = command != "holddown"
+triggerall = Power >= 1000
+trigger1 = command = "easy_c"
+value = 3000
+
+[State -1, Healing pill (easy)]
+type = ChangeState
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+triggerall = Power >= 500
+trigger1 = command = "easy_dz"
+value = 1200
+
+[State -1, teleport side]
+type = VarSet
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+trigger1 = command = "easy_bz"
+var(2) = P2BodyDist X < 140
+
+[State -1, Spirit drift (easy)]
+type = ChangeState
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+trigger1 = command = "easy_bz"
+value = 1300
+
+[State -1, Soul shock (easy)]
+type = ChangeState
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+trigger1 = command = "easy_fz"
+value = 1100
+
+[State -1, Bone Chilling Flame (easy)]
+type = ChangeState
+triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
+triggerall = command != "holddown"
+trigger1 = command = "easy_z"
+value = 1000
+
 [State -1, Soul Realm domination]
 type = ChangeState
 triggerall = (StateType != A) && (Ctrl || (StateNo = [200, 499] && MoveContact))
@@ -464,17 +541,6 @@ value = 210
 type = ChangeState
 triggerall = StateType = S
 triggerall = command != "holddown"
-trigger1 = command = "z"
-trigger1 = Ctrl
-trigger2 = command = "z"
-trigger2 = StateNo = [200, 209]
-trigger2 = MoveContact
-value = 210
-
-[State -1, ChangeState]
-type = ChangeState
-triggerall = StateType = S
-triggerall = command != "holddown"
 trigger1 = command = "x"
 trigger1 = Ctrl
 value = 200
@@ -486,17 +552,6 @@ triggerall = command != "holddown"
 trigger1 = command = "b"
 trigger1 = Ctrl
 trigger2 = command = "b"
-trigger2 = StateNo = [200, 239]
-trigger2 = MoveContact
-value = 240
-
-[State -1, ChangeState]
-type = ChangeState
-triggerall = StateType = S
-triggerall = command != "holddown"
-trigger1 = command = "c"
-trigger1 = Ctrl
-trigger2 = command = "c"
 trigger2 = StateNo = [200, 239]
 trigger2 = MoveContact
 value = 240
@@ -524,17 +579,6 @@ value = 410
 type = ChangeState
 triggerall = command = "holddown"
 triggerall = StateType != A
-trigger1 = command = "z"
-trigger1 = Ctrl
-trigger2 = command = "z"
-trigger2 = StateNo = [400, 409]
-trigger2 = MoveContact
-value = 410
-
-[State -1, ChangeState]
-type = ChangeState
-triggerall = command = "holddown"
-triggerall = StateType != A
 trigger1 = command = "x"
 trigger1 = Ctrl
 value = 400
@@ -546,17 +590,6 @@ triggerall = StateType != A
 trigger1 = command = "b"
 trigger1 = Ctrl
 trigger2 = command = "b"
-trigger2 = StateNo = [400, 439]
-trigger2 = MoveContact
-value = 440
-
-[State -1, ChangeState]
-type = ChangeState
-triggerall = command = "holddown"
-triggerall = StateType != A
-trigger1 = command = "c"
-trigger1 = Ctrl
-trigger2 = command = "c"
 trigger2 = StateNo = [400, 439]
 trigger2 = MoveContact
 value = 440
@@ -579,13 +612,6 @@ value = 610
 [State -1, ChangeState]
 type = ChangeState
 triggerall = StateType = A
-trigger1 = command = "z"
-trigger1 = Ctrl
-value = 610
-
-[State -1, ChangeState]
-type = ChangeState
-triggerall = StateType = A
 trigger1 = command = "x"
 trigger1 = Ctrl
 value = 600
@@ -594,13 +620,6 @@ value = 600
 type = ChangeState
 triggerall = StateType = A
 trigger1 = command = "b"
-trigger1 = Ctrl
-value = 640
-
-[State -1, ChangeState]
-type = ChangeState
-triggerall = StateType = A
-trigger1 = command = "c"
 trigger1 = Ctrl
 value = 640
 

@@ -1,11 +1,14 @@
 Yun Yun - move list
 ========================================
 
-Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
-Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+Default keys: A light punch | S heavy punch | Z light kick | X heavy kick
+             D special button | C super button | Enter taunt
+Throw: Forward or Back + S (close) | Run: Forward,Forward | Hop back: Back,Back | Air recovery: A+S
 
-Wind Blade                               QCF + P                  Sword slash that throws a wind crescent
-Rising Gale                              F, D, DF + P             Spinning anti-air slash
-Wind Step                                QCB + K                  Wind Lightning Pavilion teleport
-Sword Storm                              QCF, QCF + P (1 bar)     Six slashes ending in a tornado
-Thousand Wind Swords                     QCB, QCB + P (2 bars)    Wind swords rain down on the foe
+Move                                   Easy input (classic input)     
+----------------------------------------------------------------------------------------------------
+Wind Blade                             D (QCF + P)                    Sword slash that throws a wind crescent
+Rising Gale                            Down + D (F, D, DF + P)        Spinning anti-air slash
+Wind Step                              Back + D (QCB + K)             Wind Lightning Pavilion teleport
+Sword Storm                            C (1 bar) (QCF, QCF + P)       Six slashes ending in a tornado
+Thousand Wind Swords                   Down + C (2 bars) (QCB, QCB + P) Wind swords rain down on the foe

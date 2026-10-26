@@ -1,11 +1,14 @@
 Xiao Yan - move list
 ========================================
 
-Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s
-Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y
+Default keys: A light punch | S heavy punch | Z light kick | X heavy kick
+             D special button | C super button | Enter taunt
+Throw: Forward or Back + S (close) | Run: Forward,Forward | Hop back: Back,Back | Air recovery: A+S
 
-Octane Blast (Ba Ji Beng)                QCF + P                  Dashing palm that detonates up to eight times
-Flame Splitting Tsunami                  QCB + P                  Heavy Profound Ruler slam sends a wave of flame along the ground
-Rising Flame Ruler                       F, D, DF + P             Invincible anti-air ruler swing
-Skyfire Three Mysterious Change          QCF, QCF + P (1 bar)     Burst + 10 s attack buff with flame aura
-Buddha's Angry Lotus                     QCB, QCB + P (3 bars)    Compressed multi-flame lotus that detonates
+Move                                   Easy input (classic input)     
+----------------------------------------------------------------------------------------------------
+Octane Blast (Ba Ji Beng)              D (QCF + P)                    Dashing palm that detonates up to eight times
+Flame Splitting Tsunami                Forward + D (QCB + P)          Heavy Profound Ruler slam sends a wave of flame along the ground
+Rising Flame Ruler                     Down + D (F, D, DF + P)        Invincible anti-air ruler swing
+Skyfire Three Mysterious Change        C (1 bar) (QCF, QCF + P)       Burst + 10 s attack buff with flame aura
+Buddha's Angry Lotus                   Down + C (3 bars) (QCB, QCB + P) Compressed multi-flame lotus that detonates

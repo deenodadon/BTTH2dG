@@ -244,16 +244,30 @@ def build_character(key, preview=True):
         f.write(cnsgen.def_file(key, d["name"]))
     # move list
     ml = ["%s - move list" % d["name"], "=" * 40, ""]
-    ml += ["Light punch x | Heavy punch y (z) | Light kick a | Heavy kick b (c) | Taunt s",
-           "Throw: F or B + y (close) | Run: F,F | Hop back: B,B | Air recovery: x+y", ""]
+    ml += ["Default keys: A light punch | S heavy punch | Z light kick | X heavy kick",
+           "             D special button | C super button | Enter taunt",
+           "Throw: Forward or Back + S (close) | Run: Forward,Forward | Hop back: Back,Back | Air recovery: A+S",
+           "", "%-38s %-30s %s" % ("Move", "Easy input (classic input)", ""), "-" * 100]
     for nm, inp, desc in cnsgen.MOVELIST[key]:
-        ml.append("%-40s %-24s %s" % (nm, inp, desc))
+        ml.append("%-38s %-30s %s" % (nm, easy_input(inp), desc))
     with open(os.path.join(outdir, "movelist.txt"), "w") as f:
         f.write("\n".join(ml) + "\n")
     t2 = time.time()
     meta = dict(key=key, sprites=len(body_keys), fx=len(E), render_s=round(t1 - t0, 1), total_s=round(t2 - t0, 1),
                 sounds={"%d,%d" % k: v[1] for k, v in S.items()})
     return meta
+
+
+EASY_INPUTS = [("QCF, QCF + P", "C"), ("QCB, QCB + P", "Down + C"), ("F, D, DF + P", "Down + D"),
+               ("D, D + P", "Down + D"), ("QCF + P", "D"), ("QCB + P", "Forward + D"), ("QCB + K", "Back + D")]
+
+
+def easy_input(inp):
+    """Movelist text: easy key (engine default keyboard) with the classic motion in brackets."""
+    for classic, easy in EASY_INPUTS:
+        if inp.startswith(classic):
+            return "%s%s (%s)" % (easy, inp[len(classic):], classic)
+    return inp
 
 
 def write_select(chars, stages):

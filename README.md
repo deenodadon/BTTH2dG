@@ -30,26 +30,34 @@ like the 3D-CG donghua. The stages use layered parallax and a perspective floor.
 
 ## Controls
 
-| Button | Action |
+Ikemen GO's default player-1 keyboard layout is shown below. You can change keys or set up a gamepad in
+**Options → Key Config**. "Forward" and "Back" are relative to the way your fighter is facing.
+
+| Key | Action |
 |---|---|
-| x / y (z) | light / heavy punch |
-| a / b (c) | light / heavy kick |
-| s (start) | taunt (builds power) |
-| F or B + y, up close | throw |
-| F,F / B,B | run / hop back |
-| x+y in the air | air recovery |
+| Arrow keys | move / jump / crouch. Hold Back to block |
+| **A** / **S** | light / heavy punch |
+| **Z** / **X** | light / heavy kick |
+| **D** | **special button** |
+| **C** | **super button** (needs power) |
+| Enter | taunt (builds power) |
+| Forward or Back + **S**, up close | throw |
+| Forward, Forward / Back, Back | run / hop back |
+| **A + S** in the air | air recovery |
 
-`QCF` = down, down-forward, forward. `QCB` = down, down-back, back. `P` = x or y, `K` = a or b.
-Supers cost power bars, shown in brackets.
+### Easy specials and supers
 
-| Fighter | Specials | Supers |
-|---|---|---|
-| **Xiao Yan** | Octane Blast / Ba Ji Beng (QCF+P), Flame Splitting Tsunami (QCB+P), Rising Flame Ruler (F,D,DF+P) | Skyfire Three Mysterious Change (QCF QCF+P, 1 bar): burst plus 10 s attack buff. Buddha's Angry Lotus (QCB QCB+P, **3 bars**) |
-| **Yao Lao** | Bone Chilling Flame (QCF+P), Soul Shock, which can't be blocked (QCB+P), Healing Pill (D,D+P, half a bar), Spirit Drift teleport (QCB+K) | Bone Chilling Flame Torrent beam (1 bar). Soul Realm Domination, a giant soul palm that can't be blocked (2 bars) |
-| **Xun'er** | Emperor Seal: Open Mountain (QCF+P), Golden Flame Rise (F,D,DF+P), Ocean Reversal flip kick (QCB+K) | Emperor Seal Skill, a five-seal combo (1 bar). Golden Emperor Burning Heaven Flame pillar (2 bars). Passive: Bloodline Suppression (higher defence) |
-| **Medusa** | Venomous Flame (QCF+P), Serpent Lunge (QCB+P), Spatial Seal (D,D+P) | Seven-Coloured Sky Swallowing Python (1 bar), Spatial Collapse (2 bars) |
-| **Yun Yun** | Wind Blade (QCF+P), Rising Gale (F,D,DF+P), Wind Step teleport (QCB+K) | Wind Lightning sword storm and tornado (1 bar), Thousand Wind Swords (2 bars) |
-| **Little Fairy Doctor** | Poison Mist (QCF+P), Toxic Palm (QCB+P), Poison Field area denial (D,D+P) | Woeful Poison Body unleashed (1 bar), Poison Calamity rain (2 bars) |
+| Input | Xiao Yan | Yao Lao | Xun'er | Medusa | Yun Yun | Little Fairy Doctor |
+|---|---|---|---|---|---|---|
+| **D** | Octane Blast | Bone Chilling Flame | Emperor Seal: Open Mountain | Venomous Flame | Wind Blade | Poison Mist |
+| **Forward + D** | Flame Splitting Tsunami | Soul Shock (unblockable) | - | Serpent Lunge | - | Toxic Palm |
+| **Down + D** | Rising Flame Ruler | Healing Pill (half a bar) | Golden Flame Rise | Spatial Seal | Rising Gale | Poison Field |
+| **Back + D** | - | Spirit Drift (teleport) | Ocean Reversal | - | Wind Step (teleport) | - |
+| **C** (1 bar) | Skyfire Three Mysterious Change | Bone Chilling Flame Torrent | Emperor Seal Skill (five seals) | Seven-Coloured Python | Sword Storm | Woeful Poison Body |
+| **Down + C** | Buddha's Angry Lotus (**3 bars**) | Soul Realm Domination (2 bars) | Golden Emperor Burning Heaven Flame (2 bars) | Spatial Collapse (2 bars) | Thousand Wind Swords (2 bars) | Poison Calamity (2 bars) |
+
+The classic fighting-game motions still work too, for example quarter-circle forward + punch. Every
+`movelist.txt` lists both inputs.
 
 Each character folder also has a `movelist.txt`. The CPU opponent has its own logic (anti-airs, zoning, combos)
 whenever the engine's AI is active.
