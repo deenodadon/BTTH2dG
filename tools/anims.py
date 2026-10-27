@@ -300,10 +300,12 @@ def anim_trip(sty):
     return dict(frames=[F(a, 4), F(mod(a, rot=-60), -1)])
 
 
-def anim_bounce(sty):
+def anim_bounce(sty, hold=True):
+    """Body bouncing off the floor. hold=False ends the animation, which the common states
+    wait for (5100 "hit ground" and 5170 "trip landing" must finish or the fighter never gets up)."""
     return dict(frames=[F(mod(lying_pose(sty), rot=-80, nhip=40, fhip=60, nknee=-40), 3),
                         F(mod(lying_pose(sty), rot=-70, nhip=50, fhip=70), 3),
-                        F(mod(lying_pose(sty), rot=-75, nhip=40, fhip=50), -1)])
+                        F(mod(lying_pose(sty), rot=-75, nhip=40, fhip=50), -1 if hold else 4)])
 
 
 def anim_lying(sty, dead=False):

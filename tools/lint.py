@@ -136,6 +136,10 @@ def check_char(key):
         for g, n, t in frs:
             if (g, n) not in sprites and g >= 0:
                 err(where0, "action %d references missing sprite %d,%d" % (aid, g, n))
+    # common states that wait for these animations to end (AnimTime = 0): a -1 last frame freezes them
+    for a in (5, 6, 10, 12, 40, 47, 120, 190, 5035, 5100, 5120, 5170):
+        if a in air and air[a] and air[a][-1][2] == -1:
+            err(where0, "animation %d ends on an infinite (-1) frame but the common state waits for it to finish" % a)
     required = [0, 5, 6, 10, 11, 12, 20, 21, 40, 41, 42, 43, 47, 100, 105, 120, 130, 131, 132, 150, 151, 152, 170,
                 180, 190, 5000, 5001, 5002, 5010, 5011, 5012, 5020, 5021, 5022, 5030, 5035, 5040, 5050, 5070, 5080,
                 5090, 5100, 5110, 5120, 5140, 5150, 5160, 5170, 5200, 5210, 5300]
@@ -208,6 +212,11 @@ def check_char(key):
                 warn(where, "parameter %s not in Ikemen's %s parser" % (k, typ))
         # references
         st_anim = states.get(sno, {}).get("anim")
+        if st_anim is not None and any(k.startswith("trigger") and re.search(r"AnimTime\s*=\s*0\b", v or "", re.I)
+                                       for k, v, ln in items):
+            frs = air.get(int(st_anim), [])
+            if frs and frs[-1][2] == -1:
+                err(where, "waits for AnimTime = 0 but anim %s ends on an infinite (-1) frame" % st_anim)
         for k, v, ln in items:
             if k.startswith("trigger") and st_anim is not None:
                 for n in re.findall(r"AnimElem\s*=\s*(\d+)", v, re.I) + re.findall(r"AnimElem(?:Time|No)\((\d+)\)", v, re.I):
