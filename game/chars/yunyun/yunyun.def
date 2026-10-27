@@ -11,6 +11,7 @@ localcoord = 640, 480
 [Files]
 cmd = yunyun.cmd
 cns = yunyun.cns
+st = yunyun.cns
 stcommon = common1.cns
 sprite = yunyun.sff
 anim = yunyun.air

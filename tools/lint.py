@@ -158,7 +158,11 @@ def check_char(key):
     # states
     states = {}
     blocks = []
-    for fname in (files["cns"], files["cmd"]):
+    # Ikemen GO only compiles states from st/stN files and the cmd file ("cns" is constants only)
+    st_files = [v for k, v in files.items() if re.fullmatch(r"st\d*", k) and v]
+    if not st_files:
+        err(where0, "def: no st file, so none of the character's own states would load")
+    for fname in st_files + [files["cmd"]]:
         text = open(os.path.join(base, fname)).read()
         cur = None
         for sec, items in ini_sections(text):

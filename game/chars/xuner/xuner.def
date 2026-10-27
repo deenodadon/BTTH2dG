@@ -11,6 +11,7 @@ localcoord = 640, 480
 [Files]
 cmd = xuner.cmd
 cns = xuner.cns
+st = xuner.cns
 stcommon = common1.cns
 sprite = xuner.sff
 anim = xuner.air

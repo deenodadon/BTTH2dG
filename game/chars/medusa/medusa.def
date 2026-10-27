@@ -11,6 +11,7 @@ localcoord = 640, 480
 [Files]
 cmd = medusa.cmd
 cns = medusa.cns
+st = medusa.cns
 stcommon = common1.cns
 sprite = medusa.sff
 anim = medusa.air

@@ -11,6 +11,7 @@ localcoord = 640, 480
 [Files]
 cmd = yaolao.cmd
 cns = yaolao.cns
+st = yaolao.cns
 stcommon = common1.cns
 sprite = yaolao.sff
 anim = yaolao.air

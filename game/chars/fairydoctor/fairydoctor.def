@@ -11,6 +11,7 @@ localcoord = 640, 480
 [Files]
 cmd = fairydoctor.cmd
 cns = fairydoctor.cns
+st = fairydoctor.cns
 stcommon = common1.cns
 sprite = fairydoctor.sff
 anim = fairydoctor.air

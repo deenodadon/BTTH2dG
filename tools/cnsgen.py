@@ -1167,6 +1167,7 @@ localcoord = 640, 480
 [Files]
 cmd = {key}.cmd
 cns = {key}.cns
+st = {key}.cns
 stcommon = common1.cns
 sprite = {key}.sff
 anim = {key}.air
